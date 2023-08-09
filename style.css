@@ -1,0 +1,425 @@
+:root {
+  --accent-01: #e42945;
+  --accent-01: hsl(351, 78%, 53%);
+  --accent-0102: #ed542a;
+  --accent-02: #febe10;
+  --accent-04: #296ada;
+  --accent-05: #fe79ae;
+  --dark: #000;
+  --white: #fff;
+  --grey: #aaa;
+  --gray: #787878;
+  --group-01-accent-03: #bec63e;
+  --group-01-accnet-0302: #37ba79;
+}
+* {
+  padding: 0;
+  margin: 0;
+  border-radius: 1.2rem;
+  /*!for test - border */
+  /* border-width: 5px !important;
+  border: solid var(--dark, #000); */
+  /* --- */
+  color: var(--dark);
+  text-align: center;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+svg:NOT(.no-shadow){
+  filter: drop-shadow(
+    2px 5px 0px rgb(0, 0, 0, 1)
+  ); /* Adjust values as needed */
+}
+:is(h1, h2, h3, h4, h5, h6) {
+  font-family: "Chango", sans-serif;
+}
+h1 {
+  font-size: 4rem;
+  color: var(--accent-0102);
+  -webkit-text-fill-color: var(--accent-01);
+  ); /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--dark);
+  filter: drop-shadow(
+    2px 2px 0px rgb(0, 0, 0, 1)
+  ); /* Adjust values as needed */
+}
+h2 {
+  font-size: 2rem;
+  color: var(--dark);
+  -webkit-text-fill-color: var(--white);
+  ); /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--dark);
+  filter: drop-shadow(
+    2px 2px 0px rgb(0, 0, 0, 1)
+  ); /* Adjust values as needed */
+}
+h5 {
+  font-size: 1.5rem;
+}
+/* ||| */
+
+.Whole-Site {
+  border: 0 solid rgb(208, 255, 80);
+  max-width: 1024px;
+  margin: auto;
+}
+
+.Whole-mid-sec {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+/* &1 HERO */
+  .Hero-sec {
+    display: flex;
+    border-radius: 2rem  2rem  4rem 4rem;
+    background-color: var(--accent-02);
+    border: 2px solid var(--dark) ;
+    position: relative;
+    padding: 4rem 0 0;
+    /* --- */
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* --- */
+    flex-direction: row;
+    margin:0 -5rem;
+  }
+  .Hero-sec .main{
+    flex: 1; /* Allow the main element to grow and fill the remaining space */
+    
+    display: flex;
+    flex-direction: column;
+    min-width: 30rem ;
+    margin: auto;
+  }
+  .Hero-sec .main img{
+    margin: 0 auto;
+    min-width: 30em;
+    z-index: 5;
+  }
+  .side {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+    width: 100px; /* Adjust the width as needed */
+    /* Add any other styling for the side elements */
+  }
+
+  .side-left {
+    left: 0;
+    align-items: flex-start;
+  }
+
+  .side-right {
+    right: 0;
+    align-items: flex-end;
+
+  }
+  .side svg{
+    z-index: -5;
+    border-radius: 0;
+    width: 100;
+  }
+
+  .side-left svg:nth-of-type(1) {
+    position: relative;
+    top: 1rem;
+    left: 2rem;
+    transform: rotate(50deg);
+
+  }
+
+  .side-left svg:nth-of-type(2) {
+    position: relative;
+    top: 10%;
+    left: 140%;
+  }
+
+  .side-left svg:nth-of-type(3) {
+    position: relative;
+    top:  30px;
+    left: 40%;
+  }
+
+  .side-left svg:nth-of-type(4) {
+    position: relative;
+    top:  90px;
+    left: 160%;
+  }
+
+  .side-right svg:nth-of-type(1) {
+    position: relative;
+    top: 1rem;
+    right: 2rem;
+
+  }
+
+
+  .side-right svg:nth-of-type(2) {
+    position: relative;
+    top: 10%;
+    right: 140%;
+  }
+
+  .side-right svg:nth-of-type(3) {
+    position: relative;
+    top:  30px;
+    right: 40%;
+  }
+
+  .side-right svg:nth-of-type(4) {
+    position: relative;
+    top:  130px;
+    right: 160%;
+  }
+
+/* &1 MIDDLES */
+/* background grid */
+.Whole-Middles {
+content: "";
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  /* width: 100%; */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px; /* Adjust grid size */
+  z-index: -1;
+  margin: -2rem 0;
+}
+.Whole-Middles {
+  border: 2px solid var(--dark);
+  width: 100%;
+}
+/* &2 IN Comman */
+
+/* &3 image */
+
+.sec-img {
+  border: 0 solid red;
+  /* to make image at center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec-img img {
+  border: 0 solid rgb(0, 238, 255);
+  width: 100%;
+}
+
+.sec-img {
+
+  grid-row: 1/3;
+
+}
+
+
+/* &3 text box */
+
+
+
+.sec-text h5 {
+  margin: 0rem 0 1rem;
+}
+.sec-text p {
+  margin: 0 2rem;
+}
+
+.sec-text {
+  border: solid var(--dark) 2px;
+  padding: 2rem 1rem;
+  background-color: var(--white);
+  max-width: 400px;
+  margin: 4rem 0 0 0;
+  z-index: 2;
+  box-shadow: 10px -10px 0px var(--accent-04), 10px -10px 0px 2px rgb(0, 0, 0);
+}
+
+/* &3 svgs */
+
+
+
+.sec-svgs {
+  text-align: start;
+  border: 0px solid green;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 5;
+  background-color: transparent;
+}
+
+/*  */
+
+
+.text-direct-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-end;
+  align-items: center;
+  /* --- */
+  font-size: 0.8rem;
+  width: 10rem;
+}
+
+
+
+.text-direct-img h6 {
+  color: var(--dark);
+  -webkit-text-fill-color:  var(--white);
+  ); /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: var(--accent-01);
+  font-size: 1rem;
+}
+
+
+/* &2 sec1and3 */
+.sec1and3 {
+  transform: translate(4rem, 0);
+}
+/* &3 image */
+
+.sec1and3 .sec-img {
+
+  grid-column:2/3;
+
+}
+
+.sec1and3 .sec-img img {
+  transform: translate(4rem, 2rem) scale(1.3);
+}
+/* &3 text box */
+.sec1and3 .sec-text{
+  box-shadow: -10px -10px 0px var(--accent-01), -10px -10px 0px 2px rgb(0, 0, 0);
+  
+}
+
+/* &3 svgs */
+
+
+.sec1and3 svg:nth-of-type(1) {
+  position: relative;
+  top: 20%;
+  right: 40%;
+  /* --- */
+  transform: rotate(40.442deg);
+}
+.sec1and3 svg:nth-of-type(2) {
+  position: relative;
+  top: 30%;
+  right: 50%;
+  /* --- */
+  transform: rotate(-90deg);
+}
+/* &3 svgs - text-direct-img  section */
+
+.sec1and3 .text-direct-img {
+  position: relative;
+  right: -4rem;
+  margin: 0 0 auto;
+  transform: rotate(-22.442deg);
+  order:1
+
+}
+
+
+
+.sec1and3 .text-direct-img svg {
+  /* transform: rotate(-22.442deg); */
+  width: 100%;
+  margin: 1rem;
+  position: relative;
+  right: -4rem;
+  transform: scaleX(1);
+}
+
+/* &2 Sec2 */
+.sec2 {
+  transform: translate(-4rem, 0);
+}
+/* &3 image */
+
+
+
+.sec2 .sec-img img {
+  transform: translate(-4rem, -2rem) scale(1.3);
+}
+/* &3 text box */
+
+/* &3 svgs */
+
+
+.sec2 svg:nth-of-type(1) {
+  position: relative;
+  top: 10%;
+  right: 25%;
+  /* --- */
+  transform: rotate(-22.442deg);
+}
+.sec2 svg:nth-of-type(2) {
+  position: relative;
+  top: -10%;
+  right: 5%;
+  /* --- */
+  transform: rotate(0deg);
+}
+/* &3 svgs - text-direct-img  section */
+
+.sec2 .text-direct-img {
+  margin: 0 auto 40%-10%;
+  transform: rotate(22.442deg);
+
+}
+
+
+
+.sec2 .text-direct-img svg {
+  /* transform: rotate(-22.442deg); */
+  width: 100%;
+  margin: 1rem;
+  position: relative;
+  right: 2rem;
+  transform: scaleX(-1);
+}
+/* &2 sec3 */
+/* &3 image */
+
+
+/* &3 text box */
+.sec1and3 .sec-text{
+  box-shadow: -10px -10px 0px var(--group-01-accent-03), -10px -10px 0px 2px rgb(0, 0, 0);
+  
+}
+/* &3 svgs */
+
+
+.sec1and3 svg:nth-of-type(1) {
+  position: relative;
+  top: 10%;
+  right: -10%;
+  /* --- */
+  transform: rotate(-0deg);
+}
+.sec3 svg:nth-of-type(2) {
+
+  position: relative;
+  top: 10%;
+  right: 40%;
+  /* --- */
+  transform: rotate(-90deg);
+}
+
+.sec3 .sec-img img {
+  transform: translate(4rem, -6rem) scale(1.3);
+}
