@@ -16,6 +16,8 @@
   padding: 0;
   margin: 0;
   border-radius: 1.2rem;
+  box-sizing: border-box;
+  /*  */
   /*!for test - border */
   /* border-width: 5px !important;
   border: solid var(--dark, #000); */
@@ -30,7 +32,6 @@ body {
     linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
   z-index: -1;
-  margin: -2rem 0;
 }
 
 p {
@@ -68,7 +69,7 @@ svg:not(.no-shadow):nth-child(3) {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 6.5rem;
   color: var(--accent-0102);
   -webkit-text-fill-color: var(--accent-01);
   -webkit-text-stroke-width: 1px;
@@ -113,15 +114,19 @@ button {
   text-transform: uppercase;
 }
 a {
-  text-decoration: none;
   font-weight: bolder;
   font-style: normal;
 }
 /* ||| */
 
 .Whole-Site {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*  */
   border: 0 solid rgb(208, 255, 80);
-  max-width: 1024px;
+  /* max-width: 1024px; */
+  width: 98vw;
   margin: auto;
 }
 
@@ -132,42 +137,50 @@ a {
 }
 /* &1 HERO */
 .Hero-sec {
-  height: 95vh;
+  height: 96vh;
+  width: 96vw;
   display: flex;
   border-radius: 2rem 2rem 4rem 4rem;
   background-color: var(--accent-02);
   border: 2px solid var(--dark);
   position: relative;
-  padding: 4rem 0 0;
+  /* padding: 4rem 0 0; */
   /* --- */
   /* display: grid; */
   /* grid-template-columns: 1fr 1fr 1fr; */
   /* --- */
   flex-direction: row;
-  margin: 0 -5rem;
+  margin: 2vh 2vw;
 }
 .Hero-sec .main {
+  position: static;
+  /*  */
   flex: 1; /* Allow the main element to grow and fill the remaining space */
-
   display: flex;
   flex-direction: column;
-  min-width: 30rem;
-  margin: auto;
+  /* min-width: 30rem; */
+  width: 30%;
+  margin: 2% 20% 0;
 }
 .Hero-sec .main img {
-  margin: 0 auto;
-  min-width: 30em;
+  position: relative;
+  top: 5rem;
+  /*  */
+  margin: -5rem auto;
+  /* min-width: 30em; */
   z-index: 5;
+  height: 100%;
 }
 
 .side {
   position: absolute;
-  top: 50%;
+  height: 100%;
+  /* top: 50%; */
   display: flex;
   flex-direction: column;
-  transform: translateY(-50%);
-  width: 100px; /* Adjust the width as needed */
-  /* Add any other styling for the side elements */
+  justify-content: space-around;
+  /* transform: translateY(-50%); */
+  width: 30%;
 }
 
 .side-left {
@@ -180,77 +193,90 @@ a {
   align-items: flex-end;
 }
 .side svg {
-  z-index: -5;
+  /* z-index: -5; */
   border-radius: 0;
-  width: 100;
+  /* width: 100; */
+  transform: scale(1.2);
 }
+/*&3 left side */
 
 .side-left svg:nth-of-type(1) {
   position: relative;
-  top: 1rem;
-  left: 2rem;
+  top: 10%;
+  left: 30%;
   transform: rotate(50deg);
 }
 
 .side-left svg:nth-of-type(2) {
   position: relative;
   top: 10%;
-  left: 140%;
+  left: 50%;
 }
 
 .side-left svg:nth-of-type(3) {
   position: relative;
-  top: 30px;
-  left: 40%;
+  top: 15%;
+  left: 20%;
 }
-
 .side-left svg:nth-of-type(4) {
   position: relative;
-  top: 90px;
-  left: 160%;
+  top: 5%;
+  left: 80%;
 }
+/*&3 right side */
 
 .side-right svg:nth-of-type(1) {
   position: relative;
-  top: 1rem;
-  right: 2rem;
+  top: 7%; /* Adjusted from 10% */
+  right: 28%; /* Adjusted from 30% */
+  transform: rotate(50deg);
 }
 
 .side-right svg:nth-of-type(2) {
   position: relative;
-  top: 10%;
-  right: 140%;
+  top: 13%; /* Adjusted from 10% */
+  right: 53%; /* Adjusted from 50% */
 }
 
 .side-right svg:nth-of-type(3) {
   position: relative;
-  top: 30px;
-  right: 40%;
+  top: 12%; /* Adjusted from 15% */
+  right: 18%; /* Adjusted from 20% */
 }
 
 .side-right svg:nth-of-type(4) {
   position: relative;
-  top: 130px;
-  right: 160%;
+  top: 2%; /* Adjusted from 5% */
+  right: 78%; /* Adjusted from 80% */
 }
 
 /* &1 MIDDLES */
 /* background grid */
 .Whole-Middles {
-  content: "";
-  /* position: fixed; */
-  top: 0;
-  left: 0;
-  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*  */
   /* grid background */
   background-color: rgba(255, 255, 255, 0.438);
   background-size: 20px 20px; /* Adjust grid size */
   z-index: -1;
-  margin: -2rem 0;
-}
-.Whole-Middles {
+  margin: -2rem auto;
+  padding-top: 15rem;
+  /*  */
   border: 2px solid var(--dark);
-  width: 100%;
+  width: auto;
+  max-width: 1024px;
+}
+/* &2 Prepare */
+
+.prepare-sec {
+  width: 70%;
+}
+
+.prepare-sec p {
+  width: 70%;
+  margin: auto;
 }
 /* &2 IN Comman */
 
@@ -473,10 +499,11 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 1.6rem;
+  width: 100%;
   /*  */
   padding: 4rem 0;
   border-radius: 4rem 4rem 0 0;
-  margin: -4rem;
+  margin: auto;
   /*  */
   background-color: var(--dark);
 }

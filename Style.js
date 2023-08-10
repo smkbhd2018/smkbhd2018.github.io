@@ -1,4 +1,5 @@
 const svgElements = document.querySelectorAll("svg:not(.no-shadow)");
+const svgInHero = document.querySelectorAll(".side svg");
 const imgMiddles = document.querySelectorAll(".Whole-mid-sec .sec-img");
 
 svgElements.forEach((svg) => {
@@ -7,6 +8,12 @@ svgElements.forEach((svg) => {
 
   svg.style.animation = `wiggle ${randomValue1}s ease-in-out infinite`;
 });
+
+// svgInHero.forEach((svg) => {
+//   const randomValue1 = getRandomValue(3, 5); // Adjust the range as needed
+
+//   // svg.style.transform = "scale("1")";
+// });
 
 imgMiddles.forEach((img) => {
   const randomValue1 = getRandomValue(10, 20); // Adjust the range as needed
