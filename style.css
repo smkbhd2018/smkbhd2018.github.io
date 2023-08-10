@@ -178,6 +178,7 @@ a {
   /* min-width: 30em; */
   z-index: 5;
   height: 100%;
+  display: none;
 }
 
 .side {
@@ -605,10 +606,11 @@ a {
 
 @media screen and (max-width: 1000px) {
   /* &2 General */
-
+  html {
+    font-size: 120% !important;
+  }
   /* &2 Hero */
   .Hero-sec .main img {
-    display: none;
   }
   /* &2 MID */
   .Whole-mid-sec {
