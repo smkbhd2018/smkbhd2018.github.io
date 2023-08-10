@@ -604,6 +604,13 @@ a {
 /* &1 MEDIA QUERIES */
 
 @media screen and (max-width: 1000px) {
+  /* &2 General */
+
+  /* &2 Hero */
+  .Hero-sec .main img {
+    display: none;
+  }
+  /* &2 MID */
   .Whole-mid-sec {
     justify-items: center;
     grid-template-columns: 50% 50%;
