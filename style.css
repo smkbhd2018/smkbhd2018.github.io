@@ -98,7 +98,7 @@ h2 {
   ); /* Adjust values as needed */
 }
 h3 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 h5 {
   font-size: 1.5rem;
@@ -604,11 +604,24 @@ a {
 
 /* &1 MEDIA QUERIES */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   /* &2 General */
+  /* 
   html {
-    font-size: 120% !important;
+    font-size: 120%;
   }
+  p {
+    font-size: 200%;
+  }
+  a {
+    font-size: 100%;
+  }
+  h5 {
+    font-size: 250%;
+  }
+  h6 {
+    font-size: 1.4rem !important;
+  } */
   /* &2 Hero */
   .Hero-sec .main img {
   }
@@ -631,8 +644,8 @@ a {
 
   /*  */
 
-  .sec1and3 svg:nth-of-type(2) {
-    margin: 0 auto 40%-10%;
+  .sec1and3 .text-direct-img {
+    margin: 0 auto 40% -10%;
   }
 
   /*  */
