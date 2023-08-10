@@ -16,9 +16,10 @@
   --box-shadow-size: 2px;
 
   /*  */
-  --img-hero-offset: 5rem;
-  --multiplier: 2;
-  --offset: 4rem;
+  --img-hero-offset: 20rem;
+  --img-margin-top: 2rem;
+  --multiplier: 1;
+  --offset: 5rem;
   /*  */
   --offset-side-imgNsvg-mobile: 5rem;
   --offset-text-direct-img-mobile: 5rem;
@@ -32,7 +33,7 @@
   box-sizing: border-box;
   /*  */
   /*!for test - border */
-  /* border-width: 5px !important;
+  /* border-width: 0.1px !important;
   border: solid var(--dark, #000); */
   /* --- */
   color: var(--dark);
@@ -162,7 +163,7 @@ a {
   margin: 2vh 2vw;
 }
 .Hero-sec .main {
-  position: static;
+  /* position: static; */
   z-index: 1;
   /*  */
   flex: 1; /* Allow the main element to grow and fill the remaining space */
@@ -172,16 +173,24 @@ a {
   width: 30%;
   margin: 2% 20% 0;
 }
-.Hero-sec .main img {
+.Hero-sec .main .img-container {
+  height: 100%;
+  overflow: hidden;
   position: relative;
-  top: var(--img-hero-offset);
+  margin: 0 0 calc(-1 * var(--img-hero-offset) - var(--img-margin-top)) 0;
+  padding: 1rem 0 0 0;
+}
+
+.Hero-sec .main img {
+  object-fit: cover;
+  position: relative;
+  top: calc(var(--img-hero-offset));
   /*  */
   margin: calc(-1 * var(--img-hero-offset)) auto;
-  /* min-width: 30em; */
   z-index: 5;
-  /* height: 100%; */
-  width: 100%;
-  display: none;
+  height: 100%;
+  /* width: 100%; */
+  /* scale: 2; */
 }
 
 .side {
@@ -280,7 +289,8 @@ a {
   background-size: 20px 20px; /* Adjust grid size */
   margin: -3rem 10rem;
   padding-top: calc(
-    var(--multiplier) * var(--img-hero-offset) + (1 * var(--offset))
+    var(--multiplier) * var(--img-hero-offset) +
+      (1 * var(--offset) + (var(--img-margin-top)))
   );
   /*  */
   border: 2px solid var(--dark);
@@ -627,6 +637,12 @@ a {
   html {
     font-size: 60%;
   }
+  html,
+  body {
+    overflow-x: hidden; /* Prevent horizontal overscroll */
+    -webkit-overflow-scrolling: touch; /* Improve scrolling performance on iOS devices */
+    overscroll-behavior: contain; /* Adjust the rubber-banding behavior */
+  }
   /* &2 Whole Site */
   .Whole-Site {
     width: 100vw;
@@ -640,8 +656,6 @@ a {
     height: 70vh;
   }
   .Hero-sec .main img {
-    margin: 10px 0 0 0;
-    top: 0;
   }
   .Hero-sec svg {
     scale: 0.4;
