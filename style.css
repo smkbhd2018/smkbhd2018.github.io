@@ -637,12 +637,12 @@ a {
   html {
     font-size: 60%;
   }
-  html,
+  /* html,
   body {
-    overflow-x: hidden; /* Prevent horizontal overscroll */
-    -webkit-overflow-scrolling: touch; /* Improve scrolling performance on iOS devices */
-    overscroll-behavior: contain; /* Adjust the rubber-banding behavior */
-  }
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  } */
   /* &2 Whole Site */
   .Whole-Site {
     width: 100vw;
