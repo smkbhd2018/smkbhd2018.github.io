@@ -1,6 +1,6 @@
 const svgElements = document.querySelectorAll("svg:not(.no-shadow)");
 const svgInHero = document.querySelectorAll(".side svg");
-const imgMiddles = document.querySelectorAll(".Whole-mid-sec .sec-img");
+const imgMiddles = document.querySelectorAll(".Whole-mid-sec img");
 
 svgElements.forEach((svg) => {
   const randomValue1 = getRandomValue(10, 20); // Adjust the range as needed
